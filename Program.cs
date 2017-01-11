@@ -16,6 +16,7 @@ namespace CleanObjAndBin
 
             foreach (var dir in dirs)
             {
+                if (dir.Contains(".git")) continue;
                 var files = Directory.GetFiles(dir, "*", SearchOption.AllDirectories);
                 foreach (var file in files)
                 {
